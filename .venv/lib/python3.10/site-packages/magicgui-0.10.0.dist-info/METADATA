@@ -1,0 +1,196 @@
+Metadata-Version: 2.4
+Name: magicgui
+Version: 0.10.0
+Summary:  build GUIs from python types
+Project-URL: homepage, https://github.com/pyapp-kit/magicgui
+Project-URL: repository, https://github.com/pyapp-kit/magicgui
+Project-URL: changelog, https://github.com/pyapp-kit/magicgui/blob/main/CHANGELOG.md
+Project-URL: issues, https://github.com/pyapp-kit/magicgui/issues
+Project-URL: documentation, https://pyapp-kit.github.io/magicgui/
+Author-email: Talley Lambert <talley.lambert@gmail.com>
+License: MIT
+License-File: LICENSE
+Keywords: gui,type annotations,widgets
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Software Development :: Widget Sets
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Requires-Dist: docstring-parser>=0.7
+Requires-Dist: psygnal>=0.6.1
+Requires-Dist: qtpy>=1.7.0
+Requires-Dist: superqt[iconify]>=0.6.1
+Requires-Dist: typing-extensions>=4.6
+Provides-Extra: dev
+Requires-Dist: ipython; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pdbpp; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pyqt6; extra == 'dev'
+Requires-Dist: rich; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: griffe==1.2.0; extra == 'docs'
+Requires-Dist: ipykernel; extra == 'docs'
+Requires-Dist: ipywidgets>=8.0.0; extra == 'docs'
+Requires-Dist: matplotlib; extra == 'docs'
+Requires-Dist: mkdocs; extra == 'docs'
+Requires-Dist: mkdocs-gallery==0.10.3; extra == 'docs'
+Requires-Dist: mkdocs-gen-files==0.5.0; extra == 'docs'
+Requires-Dist: mkdocs-literate-nav==0.6.1; extra == 'docs'
+Requires-Dist: mkdocs-material~=9.5; extra == 'docs'
+Requires-Dist: mkdocs-spellcheck[all]; extra == 'docs'
+Requires-Dist: mkdocstrings-python==1.11.1; extra == 'docs'
+Requires-Dist: mkdocstrings==0.26.1; extra == 'docs'
+Requires-Dist: napari==0.5.3; extra == 'docs'
+Requires-Dist: pint; extra == 'docs'
+Requires-Dist: pyqt6; extra == 'docs'
+Requires-Dist: qtgallery==0.0.2; extra == 'docs'
+Provides-Extra: image
+Requires-Dist: pillow>=4.0; extra == 'image'
+Provides-Extra: jupyter
+Requires-Dist: ipywidgets>=8.0.0; extra == 'jupyter'
+Provides-Extra: pyqt5
+Requires-Dist: pyqt5>=5.12.0; extra == 'pyqt5'
+Provides-Extra: pyqt6
+Requires-Dist: pyqt6; extra == 'pyqt6'
+Provides-Extra: pyside2
+Requires-Dist: pyside2>=5.15; (python_version >= '3.9') and extra == 'pyside2'
+Provides-Extra: pyside6
+Requires-Dist: pyside6; extra == 'pyside6'
+Provides-Extra: quantity
+Requires-Dist: pint>=0.13.0; extra == 'quantity'
+Provides-Extra: test
+Requires-Dist: annotated-types; extra == 'test'
+Requires-Dist: attrs; extra == 'test'
+Requires-Dist: ipykernel; extra == 'test'
+Requires-Dist: ipywidgets; extra == 'test'
+Requires-Dist: matplotlib; extra == 'test'
+Requires-Dist: numpy; extra == 'test'
+Requires-Dist: pandas; extra == 'test'
+Requires-Dist: pillow>=4.0; extra == 'test'
+Requires-Dist: pint>=0.13.0; extra == 'test'
+Requires-Dist: pydantic; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest-mypy-plugins>=3; extra == 'test'
+Requires-Dist: pytest-qt; extra == 'test'
+Requires-Dist: toolz; extra == 'test'
+Requires-Dist: tqdm>=4.30.0; extra == 'test'
+Provides-Extra: tqdm
+Requires-Dist: tqdm>=4.30.0; extra == 'tqdm'
+Description-Content-Type: text/markdown
+
+<h1 align="center">
+    <img src="https://raw.githubusercontent.com/pyapp-kit/magicgui/main/resources/logo_long.png" alt="magicgui" />
+</h1>
+
+<p align="center">
+  <a href="https://github.com/pyapp-kit/magicgui/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/pyapp-kit/magicgui" alt="magicgui is released under the MIT license." />
+  </a>
+  <a href="https://pypi.python.org/pypi/magicgui">
+    <img src="https://img.shields.io/pypi/v/magicgui.svg" alt="magicgui on PyPI" />
+  </a>
+  <a href="https://anaconda.org/conda-forge/magicgui">
+    <img src="https://img.shields.io/conda/vn/conda-forge/magicgui" alt="magicgui on conda-forge" />
+  </a>
+  <a href="https://python.org">
+    <img src="https://img.shields.io/pypi/pyversions/magicgui.svg?color=green" alt="magicgui python version support" />
+  </a>
+  </p>
+  <p align="center">
+  <a href="https://github.com/pyapp-kit/magicgui/actions/workflows/test_and_deploy.yml">
+    <img src="https://github.com/pyapp-kit/magicgui/actions/workflows/test_and_deploy.yml/badge.svg" alt="magicgui build status" />
+  </a>
+  <a href="https://codecov.io/gh/pyapp-kit/magicgui">
+    <img src="https://codecov.io/gh/pyapp-kit/magicgui/branch/main/graph/badge.svg" alt="magicgui code coverage" />
+  </a>
+  <a href="https://zenodo.org/badge/latestdoi/238805437">
+    <img src="https://zenodo.org/badge/238805437.svg" alt="cite magicgui" />
+  </a>
+</p>
+
+<p align="center">
+ <em>build GUIs from type annotations, using magic.</em>
+</p>
+
+
+## 📖 Docs
+
+[https://pyapp-kit.github.io/magicgui/](https://pyapp-kit.github.io/magicgui/)
+
+## Installation
+
+`magicgui` uses `qtpy` to support both `pyside2` and `pyqt5` backends.  However, you
+must have one of those installed for magicgui to work.
+
+install with pip
+
+```bash
+pip install magicgui[pyqt5]
+# or
+pip install magicgui[pyside2]
+```
+
+or with conda:
+
+```bash
+conda install -c conda-forge magicgui pyqt  # or pyside2 instead of pyqt
+```
+
+> :information_source: If you'd like to help us extend support to a different backend,
+> please open an [issue](https://github.com/pyapp-kit/magicgui/issues).
+
+## Basic usage
+
+```python
+from magicgui import magicgui
+from enum import Enum
+
+class Medium(Enum):
+    Glass = 1.520
+    Oil = 1.515
+    Water = 1.333
+    Air = 1.0003
+
+# decorate your function with the @magicgui decorator
+@magicgui(call_button="calculate", result_widget=True)
+def snells_law(aoi=30.0, n1=Medium.Glass, n2=Medium.Water, degrees=True):
+    import math
+
+    aoi = math.radians(aoi) if degrees else aoi
+    try:
+        result = math.asin(n1.value * math.sin(aoi) / n2.value)
+        return math.degrees(result) if degrees else result
+    except ValueError:
+        return "Total internal reflection!"
+
+# your function is now capable of showing a GUI
+snells_law.show(run=True)
+```
+
+![snells](https://raw.githubusercontent.com/pyapp-kit/magicgui/main/resources/snells.png)
+
+But that's just the beginning!  Please see [Documentation](https://pyapp-kit.github.io/magicgui/) for many more details
+and usage examples.
+
+## Contributing
+
+Contributions are welcome!
+
+See contributing guide [here](https://github.com/pyapp-kit/magicgui/blob/main/docs/CONTRIBUTING.md).

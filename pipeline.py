@@ -23,7 +23,18 @@ def load_dapi_image(image_path, fast_single_plane=True):
         if isinstance(z, zarr.Group):
             arr_keys = list(z.array_keys())
             if not arr_keys:
-                raise ValueError(f"No arrays found in Zarr group: {zarr_path}")
+                # Try to search subgroups for arrays (Xenium convention)
+                group_keys = list(z.group_keys())
+                for gk in group_keys:
+                    subgroup = z[gk]
+                    if hasattr(subgroup, 'array_keys'):
+                        sub_arr_keys = list(subgroup.array_keys())
+                        if sub_arr_keys:
+                            logging.info(f"Found array(s) in subgroup '{gk}': {sub_arr_keys}")
+                            img = subgroup[sub_arr_keys[0]][:]
+                            logging.info(f"Loaded array from subgroup '{gk}'")
+                            return img
+                raise ValueError(f"No arrays found in Zarr group or its subgroups: {zarr_path}")
             img = z[arr_keys[0]][:]
         else:
             img = z[:]

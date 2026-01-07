@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-svg = napari_svg:napari.yaml

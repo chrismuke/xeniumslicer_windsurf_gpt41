@@ -1,0 +1,6 @@
+2025-04-25 12:30:08,980 INFO Pipeline started at 2025-04-25 12:30:08
+2025-04-25 12:30:08,981 INFO Data dir: datasets/xenium_151351_0046859, Output dir: output/xenium_151351_0046859, Batch size: 1000, Chunk size: 10000
+2025-04-25 12:30:08,981 INFO Loading DAPI image from datasets/xenium_151351_0046859/morphology.ome.tif
+2025-04-25 12:30:08,998 INFO Zarr file found: datasets/xenium_151351_0046859/morphology.ome.zarr. Loading DAPI image from Zarr...
+2025-04-25 12:30:09,008 INFO Zarr type: <class 'zarr.hierarchy.Group'>
+2025-04-25 12:30:09,008 INFO Found array(s) in subgroup '0': ['0', '1', '2', '3', '4', '5', '6', '7', '8']

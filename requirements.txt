@@ -1,0 +1,8 @@
+numpy
+pandas
+tifffile
+pyarrow
+shapely
+Pillow
+zarr
+napari

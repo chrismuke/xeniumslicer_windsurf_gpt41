@@ -1,0 +1,8 @@
+[console_scripts]
+napari = napari.__main__:main
+
+[napari.manifest]
+napari_builtins = napari_builtins:builtins.yaml
+
+[pytest11]
+napari = napari.utils._testsupport

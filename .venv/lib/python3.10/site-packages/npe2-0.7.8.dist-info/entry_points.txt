@@ -1,0 +1,11 @@
+[console_scripts]
+npe2 = npe2.cli:main
+
+[distutils.commands]
+npe2_compile = npe2._setuptools_plugin:npe2_compile
+
+[pytest11]
+npe2 = npe2._pytest_plugin
+
+[setuptools.finalize_distribution_options]
+finalize_npe2 = npe2._setuptools_plugin:finalize_npe2

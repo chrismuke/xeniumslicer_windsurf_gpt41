@@ -1,0 +1,4 @@
+2025-04-25 12:18:46,143 INFO Pipeline started at 2025-04-25 12:18:46
+2025-04-25 12:18:46,143 INFO Data dir: datasets/xenium_151351_0046706, Output dir: output/xenium_151351_0046706, Batch size: 1000, Chunk size: 10000
+2025-04-25 12:18:46,143 INFO Loading DAPI image from datasets/xenium_151351_0046706/morphology.ome.tif
+2025-04-25 12:18:46,183 INFO Zarr file not found, loading OME-TIFF: datasets/xenium_151351_0046706/morphology.ome.tif

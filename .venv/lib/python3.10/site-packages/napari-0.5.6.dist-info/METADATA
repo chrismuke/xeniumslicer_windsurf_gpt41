@@ -1,0 +1,259 @@
+Metadata-Version: 2.2
+Name: napari
+Version: 0.5.6
+Summary: n-dimensional array viewer in Python
+Author-email: napari team <napari-steering-council@googlegroups.com>
+License: BSD 3-Clause
+Project-URL: Homepage, https://napari.org
+Project-URL: Download, https://github.com/napari/napari
+Project-URL: Bug Tracker, https://github.com/napari/napari/issues
+Project-URL: Documentation, https://napari.org
+Project-URL: Source Code, https://github.com/napari/napari
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Utilities
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: appdirs>=1.4.4
+Requires-Dist: app-model<0.4.0,>=0.3.0
+Requires-Dist: cachey>=0.2.1
+Requires-Dist: certifi>=2018.1.18
+Requires-Dist: dask[array]>=2021.10.0
+Requires-Dist: imageio!=2.22.1,>=2.20
+Requires-Dist: jsonschema>=3.2.0
+Requires-Dist: lazy_loader>=0.2
+Requires-Dist: magicgui>=0.7.0
+Requires-Dist: napari-console>=0.1.1
+Requires-Dist: napari-plugin-engine>=0.1.9
+Requires-Dist: napari-svg>=0.1.8
+Requires-Dist: npe2>=0.7.6
+Requires-Dist: numpy>=1.22.2
+Requires-Dist: numpydoc>=0.9.2
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: Pillow>=9.0
+Requires-Dist: pint>=0.17
+Requires-Dist: psutil>=5.0
+Requires-Dist: psygnal>=0.5.0
+Requires-Dist: pydantic>=1.9.0
+Requires-Dist: pygments>=2.6.0
+Requires-Dist: PyOpenGL>=3.1.0
+Requires-Dist: pywin32; platform_system == "Windows"
+Requires-Dist: PyYAML>=5.1
+Requires-Dist: qtpy>=2.3.1
+Requires-Dist: scikit-image[data]>=0.19.1
+Requires-Dist: scipy>=1.5.4
+Requires-Dist: superqt>=0.6.7
+Requires-Dist: tifffile>=2022.7.28
+Requires-Dist: toolz>=0.10.0
+Requires-Dist: tqdm>=4.56.0
+Requires-Dist: typing_extensions>=4.2.0
+Requires-Dist: vispy<0.15,>=0.14.1
+Requires-Dist: wrapt>=1.11.1
+Provides-Extra: pyside2
+Requires-Dist: PySide2!=5.15.0,>=5.13.2; (python_version < "3.11" and platform_machine != "arm64") and extra == "pyside2"
+Provides-Extra: pyside6-experimental
+Requires-Dist: PySide6<6.5; python_version < "3.12" and extra == "pyside6-experimental"
+Provides-Extra: pyqt6
+Requires-Dist: PyQt6>6.5; extra == "pyqt6"
+Requires-Dist: PyQt6!=6.6.1; platform_system == "Darwin" and extra == "pyqt6"
+Provides-Extra: pyside
+Requires-Dist: napari[pyside2]; extra == "pyside"
+Provides-Extra: pyqt5
+Requires-Dist: PyQt5!=5.15.0,>=5.13.2; extra == "pyqt5"
+Provides-Extra: pyqt
+Requires-Dist: napari[pyqt5]; extra == "pyqt"
+Provides-Extra: qt
+Requires-Dist: napari[pyqt]; extra == "qt"
+Provides-Extra: all
+Requires-Dist: napari[optional,pyqt]; extra == "all"
+Provides-Extra: optional-base
+Requires-Dist: zarr>=2.12.0; extra == "optional-base"
+Requires-Dist: napari-plugin-manager<0.2.0,>=0.1.3; extra == "optional-base"
+Provides-Extra: optional-numba
+Requires-Dist: numba>=0.57.1; extra == "optional-numba"
+Provides-Extra: optional
+Requires-Dist: napari[optional-base,optional-numba]; extra == "optional"
+Requires-Dist: triangle; extra == "optional"
+Requires-Dist: PartSegCore-compiled-backend>=0.15.8; extra == "optional"
+Provides-Extra: testing
+Requires-Dist: babel>=2.9.0; extra == "testing"
+Requires-Dist: fsspec>=2023.10.0; extra == "testing"
+Requires-Dist: hypothesis>=6.8.0; extra == "testing"
+Requires-Dist: lxml[html_clean]>5; extra == "testing"
+Requires-Dist: matplotlib>=3.6.1; extra == "testing"
+Requires-Dist: pooch>=1.6.0; extra == "testing"
+Requires-Dist: coverage>7; extra == "testing"
+Requires-Dist: docstring_parser>=0.15; extra == "testing"
+Requires-Dist: pretend>=1.0.9; extra == "testing"
+Requires-Dist: pyautogui>=0.9.54; extra == "testing"
+Requires-Dist: pytest-qt>=4.3.1; extra == "testing"
+Requires-Dist: pytest-pretty>=1.1.0; extra == "testing"
+Requires-Dist: pytest>=8.1.0; extra == "testing"
+Requires-Dist: tensorstore>=0.1.13; extra == "testing"
+Requires-Dist: virtualenv>=20.17; extra == "testing"
+Requires-Dist: xarray>=0.16.2; extra == "testing"
+Requires-Dist: IPython>=7.25.0; extra == "testing"
+Requires-Dist: qtconsole>=4.5.1; extra == "testing"
+Requires-Dist: rich>=12.0.0; extra == "testing"
+Requires-Dist: napari[optional-base]; extra == "testing"
+Provides-Extra: testing-extra
+Requires-Dist: torch>=1.7; extra == "testing-extra"
+Provides-Extra: release
+Requires-Dist: PyGithub>=1.44.1; extra == "release"
+Requires-Dist: twine>=3.1.1; extra == "release"
+Requires-Dist: gitpython>=3.1.0; extra == "release"
+Requires-Dist: requests-cache>=0.9.2; extra == "release"
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: check-manifest>=0.42; extra == "dev"
+Requires-Dist: pre-commit>=2.9.0; extra == "dev"
+Requires-Dist: pydantic; extra == "dev"
+Requires-Dist: python-dotenv; extra == "dev"
+Requires-Dist: napari[testing]; extra == "dev"
+Provides-Extra: build
+Requires-Dist: ruff; extra == "build"
+Requires-Dist: pyqt5; extra == "build"
+
+# napari
+
+### multi-dimensional image viewer for python
+
+[![napari on Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/napari/napari/main?urlpath=%2Fdesktop)
+[![image.sc forum](https://img.shields.io/badge/dynamic/json.svg?label=forum&url=https%3A%2F%2Fforum.image.sc%2Ftags%2Fnapari.json&query=%24.topic_list.tags.0.topic_count&colorB=brightgreen&suffix=%20topics&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAABPklEQVR42m3SyyqFURTA8Y2BER0TDyExZ+aSPIKUlPIITFzKeQWXwhBlQrmFgUzMMFLKZeguBu5y+//17dP3nc5vuPdee6299gohUYYaDGOyyACq4JmQVoFujOMR77hNfOAGM+hBOQqB9TjHD36xhAa04RCuuXeKOvwHVWIKL9jCK2bRiV284QgL8MwEjAneeo9VNOEaBhzALGtoRy02cIcWhE34jj5YxgW+E5Z4iTPkMYpPLCNY3hdOYEfNbKYdmNngZ1jyEzw7h7AIb3fRTQ95OAZ6yQpGYHMMtOTgouktYwxuXsHgWLLl+4x++Kx1FJrjLTagA77bTPvYgw1rRqY56e+w7GNYsqX6JfPwi7aR+Y5SA+BXtKIRfkfJAYgj14tpOF6+I46c4/cAM3UhM3JxyKsxiOIhH0IO6SH/A1Kb1WBeUjbkAAAAAElFTkSuQmCC)](https://forum.image.sc/tag/napari)
+[![License](https://img.shields.io/pypi/l/napari.svg)](https://github.com/napari/napari/raw/main/LICENSE)
+[![Build Status](https://api.cirrus-ci.com/github/Napari/napari.svg)](https://cirrus-ci.com/napari/napari)
+[![Code coverage](https://codecov.io/gh/napari/napari/branch/main/graph/badge.svg)](https://codecov.io/gh/napari/napari)
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/napari.svg)](https://python.org)
+[![Python package index](https://img.shields.io/pypi/v/napari.svg)](https://pypi.org/project/napari)
+[![Python package index download statistics](https://img.shields.io/pypi/dm/napari.svg)](https://pypistats.org/packages/napari)
+[![Development Status](https://img.shields.io/pypi/status/napari.svg)](https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black)
+[![DOI](https://zenodo.org/badge/144513571.svg)](https://zenodo.org/badge/latestdoi/144513571)
+[![NEP29](https://raster.shields.io/badge/Follows-NEP29-brightgreen.png)](https://numpy.org/neps/nep-0029-deprecation_policy.html)
+
+**napari** is a fast, interactive, multi-dimensional image viewer for Python. It's designed for browsing, annotating, and analyzing large multi-dimensional images. It's built on top of Qt (for the GUI), vispy (for performant GPU-based rendering), and the scientific Python stack (numpy, scipy).
+
+We're developing **napari** in the open! But the project is in an **alpha** stage, and there will still likely be **breaking changes** with each release. You can follow progress on [this repository](https://github.com/napari/napari), test out new versions as we release them, and contribute ideas and code.
+
+If you want to refer to our documentation, please go to [napari.org](https://www.napari.org). If you want to contribute to it, please refer to the *contributing* section below. 
+
+We're working on [tutorials](https://napari.org/stable/tutorials/), but you can also quickly get started by looking below.
+
+## installation
+
+It is recommended to install napari into a virtual environment, like this:
+
+```sh
+conda create -y -n napari-env -c conda-forge python=3.9
+conda activate napari-env
+python -m pip install "napari[all]"
+```
+
+If you prefer conda over pip, you can replace the last line with: `conda install -c conda-forge napari pyqt`
+
+See here for the full [installation guide](https://napari.org/stable/tutorials/fundamentals/installation.html).
+
+## simple example
+
+(The examples below require the `scikit-image` package to run. We just use data samples from this package for demonstration purposes. If you change the examples to use your own dataset, you may not need to install this package.)
+
+From inside an IPython shell, you can open up an interactive viewer by calling
+
+```python
+from skimage import data
+import napari
+
+viewer = napari.view_image(data.cells3d(), channel_axis=1, ndisplay=3)
+```
+
+![napari viewer with a multichannel image of cells displayed as two image layers: nuclei and membrane.](./napari/resources/multichannel_cells.png)
+
+
+To use napari from inside a script, use `napari.run()`:
+
+```python
+from skimage import data
+import napari
+
+viewer = napari.view_image(data.cells3d(), channel_axis=1, ndisplay=3)
+napari.run()  # start the "event loop" and show the viewer
+```
+
+## features
+
+Check out the scripts in our [`examples` folder](examples) to see some of the functionality we're developing!
+
+**napari** supports six main different layer types, `Image`, `Labels`, `Points`, `Vectors`, `Shapes`, and `Surface`, each corresponding to a different data type, visualization, and interactivity. You can add multiple layers of different types into the viewer and then start working with them, adjusting their properties.
+
+All our layer types support n-dimensional data and the viewer provides the ability to quickly browse and visualize either 2D or 3D slices of the data.
+
+**napari** also supports bidirectional communication between the viewer and the Python kernel, which is especially useful when launching from jupyter notebooks or when using our built-in console. Using the console allows you to interactively load and save data from the viewer and control all the features of the viewer programmatically.
+
+You can extend **napari** using custom shortcuts, key bindings, and mouse functions.
+
+## tutorials
+
+For more details on how to use `napari` checkout our [tutorials](https://napari.org/stable/tutorials/). These are still a work in progress, but we'll be updating them regularly.
+
+## mission, values, and roadmap
+
+For more information about our plans for `napari` you can read our [mission and values statement](https://napari.org/stable/community/mission_and_values.html), which includes more details on our vision for supporting a plugin ecosystem around napari.
+You can see details of [the project roadmap here](https://napari.org/stable/roadmaps/index.html).
+
+## contributing
+
+Contributions are encouraged! Please read our [contributing guide](https://napari.org/dev/developers/contributing/index.html) to get started. Given that we're in an early stage, you may want to reach out on our [GitHub Issues](https://github.com/napari/napari/issues) before jumping in. 
+
+If you want to contribute or edit to our documentation, please go to [napari/docs](https://github.com/napari/docs). 
+
+## code of conduct
+
+`napari` has a [Code of Conduct](https://napari.org/stable/community/code_of_conduct.html) that should be honored by everyone who participates in the `napari` community.
+
+## governance
+
+You can learn more about how the `napari` project is organized and managed from our [governance model](https://napari.org/stable/community/governance.html), which includes information about, and ways to contact the [@napari/steering-council and @napari/core-devs](https://napari.org/stable/community/team.html#current-core-developers).
+
+## citing napari
+
+If you find `napari` useful please cite [this repository](https://github.com/napari/napari) using its DOI as follows:
+
+> napari contributors (2019). napari: a multi-dimensional image viewer for python. [doi:10.5281/zenodo.3555620](https://zenodo.org/record/3555620)
+
+Note this DOI will resolve to all versions of napari. To cite a specific version please find the
+DOI of that version on our [zenodo page](https://zenodo.org/record/3555620). The DOI of the latest version is in the badge at the top of this page.
+
+## help
+
+We're a community partner on the [image.sc forum](https://forum.image.sc/tags/napari) and all help and support requests should be posted on the forum with the tag `napari`. We look forward to interacting with you there.
+
+Bug reports should be made on our [GitHub issues](https://github.com/napari/napari/issues/new?template=bug_report.md) using
+the bug report template. If you think something isn't working, don't hesitate to reach out - it is probably us and not you!
+
+## institutional and funding partners
+
+<a href="https://chanzuckerberg.com/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://chanzuckerberg.com/wp-content/themes/czi/img/logo-white.svg">
+    <img alt="CZI logo" src="https://chanzuckerberg.com/wp-content/themes/czi/img/logo.svg">
+  </picture>
+</a>

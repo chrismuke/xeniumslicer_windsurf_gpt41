@@ -1,0 +1,83 @@
+2025-04-25 13:18:28,389 INFO Pipeline started at 2025-04-25 13:18:28
+2025-04-25 13:18:28,389 INFO Data dir: /home/chrism/git/xeniumslicer_windsurf_claude37thinking/datasets/xenium_151351_0046706, Output dir: output_xenium_151351_0046706, Batch size: 1000, Chunk size: 10000
+2025-04-25 13:18:28,389 INFO Loading DAPI image from /home/chrism/git/xeniumslicer_windsurf_claude37thinking/datasets/xenium_151351_0046706/morphology.ome.tif
+2025-04-25 13:18:28,427 INFO Zarr file found: /home/chrism/git/xeniumslicer_windsurf_claude37thinking/datasets/xenium_151351_0046706/morphology.ome.zarr. Loading DAPI image from Zarr...
+2025-04-25 13:18:28,444 INFO Zarr type: <class 'zarr.hierarchy.Group'>
+2025-04-25 13:18:28,445 INFO Found array(s) in subgroup '0': ['0', '1', '2', '3', '4', '5', '6', '7', '8']
+2025-04-25 13:25:32,013 INFO Loaded array from subgroup '0'
+2025-04-25 13:25:32,027 INFO Loaded DAPI image shape: (1, 1, 13, 98557, 48390) (elapsed: 423.64s)
+2025-04-25 13:25:32,028 INFO Loading cell stats from /home/chrism/git/xeniumslicer_windsurf_claude37thinking/datasets/xenium_151351_0046706/cells.parquet
+2025-04-25 13:25:32,296 INFO Loaded cell stats shape: (175990, 14) (elapsed: 0.27s)
+2025-04-25 13:25:32,298 INFO Output summary CSV: output_xenium_151351_0046706/samples.csv
+2025-04-25 13:25:32,298 INFO Counting total cells for ETA estimation (if feasible)...
+2025-04-25 13:25:32,573 INFO Counted total cells in 0.27s
+2025-04-25 13:25:32,573 INFO Estimated total cells: 175990
+2025-04-25 13:25:32,573 INFO Starting patch extraction using boundaries from /home/chrism/git/xeniumslicer_windsurf_claude37thinking/datasets/xenium_151351_0046706/cell_boundaries.parquet
+2025-04-25 13:25:33,056 WARNING cell_id=aaaadepo-1: Degenerate bbox: minx=10521.000689338236, miny=6589.000459558823, maxx=10575.0, maxy=6619.000459558823 -> indices: 10511, 6579, 1, 1
+2025-04-25 13:25:33,057 INFO cell_id=aaaadepo-1, n_vertices=25, bounds=(10521.000689338236, 6589.000459558823, 10575.0, 6619.000459558823), bbox_indices=(10511, 6579, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,057 WARNING cell_id=aaaadepo-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,057 WARNING cell_id=aaaaepjh-1: Degenerate bbox: minx=10517.000229779413, miny=6632.000229779412, maxx=10580.0, maxy=6681.000114889706 -> indices: 10507, 6622, 1, 1
+2025-04-25 13:25:33,057 INFO cell_id=aaaaepjh-1, n_vertices=25, bounds=(10517.000229779413, 6632.000229779412, 10580.0, 6681.000114889706), bbox_indices=(10507, 6622, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,057 WARNING cell_id=aaaaepjh-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,057 WARNING cell_id=aaaafmdi-1: Degenerate bbox: minx=10547.000229779413, miny=6611.000114889706, maxx=10602.000229779413, maxy=6663.000344669118 -> indices: 10537, 6601, 1, 1
+2025-04-25 13:25:33,057 INFO cell_id=aaaafmdi-1, n_vertices=25, bounds=(10547.000229779413, 6611.000114889706, 10602.000229779413, 6663.000344669118), bbox_indices=(10537, 6601, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,057 WARNING cell_id=aaaafmdi-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,057 WARNING cell_id=aaaahmac-1: Degenerate bbox: minx=10461.000689338236, miny=6715.0, maxx=10491.000689338236, maxy=6751.000114889706 -> indices: 10451, 6705, 1, 1
+2025-04-25 13:25:33,057 INFO cell_id=aaaahmac-1, n_vertices=25, bounds=(10461.000689338236, 6715.0, 10491.000689338236, 6751.000114889706), bbox_indices=(10451, 6705, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,057 WARNING cell_id=aaaahmac-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,057 WARNING cell_id=aaabefob-1: Degenerate bbox: minx=10369.000459558823, miny=6681.000114889706, maxx=10437.99977022059, maxy=6777.000229779412 -> indices: 10359, 6671, 1, 1
+2025-04-25 13:25:33,057 INFO cell_id=aaabefob-1, n_vertices=25, bounds=(10369.000459558823, 6681.000114889706, 10437.99977022059, 6777.000229779412), bbox_indices=(10359, 6671, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,057 WARNING cell_id=aaabefob-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,058 WARNING cell_id=aaablimo-1: Degenerate bbox: minx=10427.99977022059, miny=6656.000114889706, maxx=10476.000689338236, maxy=6782.000229779412 -> indices: 10417, 6646, 1, 1
+2025-04-25 13:25:33,058 INFO cell_id=aaablimo-1, n_vertices=25, bounds=(10427.99977022059, 6656.000114889706, 10476.000689338236, 6782.000229779412), bbox_indices=(10417, 6646, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,058 WARNING cell_id=aaablimo-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,058 WARNING cell_id=aaabpcoe-1: Degenerate bbox: minx=10394.000459558823, miny=6656.000114889706, maxx=10439.000459558823, maxy=6724.000459558823 -> indices: 10384, 6646, 1, 1
+2025-04-25 13:25:33,058 INFO cell_id=aaabpcoe-1, n_vertices=25, bounds=(10394.000459558823, 6656.000114889706, 10439.000459558823, 6724.000459558823), bbox_indices=(10384, 6646, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,058 WARNING cell_id=aaabpcoe-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,058 WARNING cell_id=aaackjje-1: Degenerate bbox: minx=10511.000689338236, miny=6656.000114889706, maxx=10545.0, maxy=6717.000229779412 -> indices: 10501, 6646, 1, 1
+2025-04-25 13:25:33,058 INFO cell_id=aaackjje-1, n_vertices=25, bounds=(10511.000689338236, 6656.000114889706, 10545.0, 6717.000229779412), bbox_indices=(10501, 6646, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,058 WARNING cell_id=aaackjje-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,058 WARNING cell_id=aaacnhnn-1: Degenerate bbox: minx=10562.99977022059, miny=6697.000229779412, maxx=10597.000229779413, maxy=6745.0 -> indices: 10552, 6687, 1, 1
+2025-04-25 13:25:33,058 INFO cell_id=aaacnhnn-1, n_vertices=25, bounds=(10562.99977022059, 6697.000229779412, 10597.000229779413, 6745.0), bbox_indices=(10552, 6687, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,058 WARNING cell_id=aaacnhnn-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,058 WARNING cell_id=aaadegpa-1: Degenerate bbox: minx=10567.000229779413, miny=6669.000459558823, maxx=10597.99977022059, maxy=6697.000229779412 -> indices: 10557, 6659, 1, 1
+2025-04-25 13:25:33,058 INFO cell_id=aaadegpa-1, n_vertices=25, bounds=(10567.000229779413, 6669.000459558823, 10597.99977022059, 6697.000229779412), bbox_indices=(10557, 6659, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,058 WARNING cell_id=aaadegpa-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,059 WARNING cell_id=aaadilfe-1: Degenerate bbox: minx=10536.000689338236, miny=6677.000229779412, maxx=10571.000689338236, maxy=6720.0 -> indices: 10526, 6667, 1, 1
+2025-04-25 13:25:33,059 INFO cell_id=aaadilfe-1, n_vertices=25, bounds=(10536.000689338236, 6677.000229779412, 10571.000689338236, 6720.0), bbox_indices=(10526, 6667, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,059 WARNING cell_id=aaadilfe-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,059 WARNING cell_id=aaadlbgh-1: Degenerate bbox: minx=10340.0, miny=6701.000114889706, maxx=10384.000459558823, maxy=6735.0 -> indices: 10330, 6691, 1, 1
+2025-04-25 13:25:33,059 INFO cell_id=aaadlbgh-1, n_vertices=25, bounds=(10340.0, 6701.000114889706, 10384.000459558823, 6735.0), bbox_indices=(10330, 6691, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,059 WARNING cell_id=aaadlbgh-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,059 WARNING cell_id=aaaeajmc-1: Degenerate bbox: minx=10127.99977022059, miny=7097.000229779412, maxx=10175.0, maxy=7141.000114889706 -> indices: 10117, 7087, 1, 1
+2025-04-25 13:25:33,059 INFO cell_id=aaaeajmc-1, n_vertices=25, bounds=(10127.99977022059, 7097.000229779412, 10175.0, 7141.000114889706), bbox_indices=(10117, 7087, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,059 WARNING cell_id=aaaeajmc-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,059 WARNING cell_id=aaaeanmk-1: Degenerate bbox: minx=10342.000229779413, miny=6771.000114889706, maxx=10380.0, maxy=6820.0 -> indices: 10332, 6761, 1, 1
+2025-04-25 13:25:33,059 INFO cell_id=aaaeanmk-1, n_vertices=25, bounds=(10342.000229779413, 6771.000114889706, 10380.0, 6820.0), bbox_indices=(10332, 6761, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,059 WARNING cell_id=aaaeanmk-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,059 WARNING cell_id=aaaeialb-1: Degenerate bbox: minx=10356.000689338236, miny=6726.000114889706, maxx=10397.99977022059, maxy=6781.000114889706 -> indices: 10346, 6716, 1, 1
+2025-04-25 13:25:33,059 INFO cell_id=aaaeialb-1, n_vertices=25, bounds=(10356.000689338236, 6726.000114889706, 10397.99977022059, 6781.000114889706), bbox_indices=(10346, 6716, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,059 WARNING cell_id=aaaeialb-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,060 WARNING cell_id=aaaemhhp-1: Degenerate bbox: minx=10322.000229779413, miny=6748.000344669118, maxx=10362.99977022059, maxy=6799.000459558823 -> indices: 10312, 6738, 1, 1
+2025-04-25 13:25:33,060 INFO cell_id=aaaemhhp-1, n_vertices=25, bounds=(10322.000229779413, 6748.000344669118, 10362.99977022059, 6799.000459558823), bbox_indices=(10312, 6738, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,060 WARNING cell_id=aaaemhhp-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,060 WARNING cell_id=aaafdfdf-1: Degenerate bbox: minx=10430.0, miny=6551.000114889706, maxx=10472.000229779413, maxy=6597.000229779412 -> indices: 10420, 6541, 1, 1
+2025-04-25 13:25:33,060 INFO cell_id=aaafdfdf-1, n_vertices=25, bounds=(10430.0, 6551.000114889706, 10472.000229779413, 6597.000229779412), bbox_indices=(10420, 6541, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,060 WARNING cell_id=aaafdfdf-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,060 WARNING cell_id=aaafeoel-1: Degenerate bbox: minx=10055.0, miny=4885.0, maxx=10105.0, maxy=4951.000114889706 -> indices: 10045, 4875, 1, 1
+2025-04-25 13:25:33,060 INFO cell_id=aaafeoel-1, n_vertices=25, bounds=(10055.0, 4885.0, 10105.0, 4951.000114889706), bbox_indices=(10045, 4875, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,060 WARNING cell_id=aaafeoel-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,060 WARNING cell_id=aaafgkmd-1: Degenerate bbox: minx=10435.0, miny=6603.000344669118, maxx=10482.000229779413, maxy=6660.0 -> indices: 10425, 6593, 1, 1
+2025-04-25 13:25:33,060 INFO cell_id=aaafgkmd-1, n_vertices=25, bounds=(10435.0, 6603.000344669118, 10482.000229779413, 6660.0), bbox_indices=(10425, 6593, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,060 WARNING cell_id=aaafgkmd-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:33,060 WARNING cell_id=aaafgoom-1: Degenerate bbox: minx=10470.0, miny=6589.000459558823, maxx=10547.000229779413, maxy=6640.0 -> indices: 10460, 6579, 1, 1
+2025-04-25 13:25:33,060 INFO cell_id=aaafgoom-1, n_vertices=25, bounds=(10470.0, 6589.000459558823, 10547.000229779413, 6640.0), bbox_indices=(10460, 6579, 1, 1), patch_shape=None, image_shape=(1, 1, 13, 98557, 48390)
+2025-04-25 13:25:33,060 WARNING cell_id=aaafgoom-1: Patch extraction returned None. See previous logs for details.
+2025-04-25 13:25:34,302 ERROR Pipeline failed: list index out of range
+Traceback (most recent call last):
+  File "/home/chrism/git/xeniumslicer_windsurf_gpt41/pipeline.py", line 232, in main
+    for i, (cell_id, group) in enumerate(cell_boundary_chunks(boundaries_path, chunksize=chunk_size)):
+  File "/home/chrism/git/xeniumslicer_windsurf_gpt41/pipeline.py", line 95, in cell_boundary_chunks
+    batch[-1] = pd.concat([batch[-1], group], ignore_index=True)
+IndexError: list index out of range
+

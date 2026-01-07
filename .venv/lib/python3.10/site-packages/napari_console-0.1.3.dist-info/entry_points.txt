@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-console = napari_console:napari.yaml

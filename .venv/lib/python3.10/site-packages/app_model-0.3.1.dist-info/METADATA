@@ -1,0 +1,82 @@
+Metadata-Version: 2.3
+Name: app-model
+Version: 0.3.1
+Summary: Generic application schema implemented in python
+Project-URL: homepage, https://github.com/pyapp-kit/app-model
+Project-URL: repository, https://github.com/pyapp-kit/app-model
+Author: Talley Lambert
+Author-email: talley.lambert@gmail.com
+License: BSD 3-Clause License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Desktop Environment
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: User Interfaces
+Requires-Python: >=3.9
+Requires-Dist: in-n-out>=0.1.5
+Requires-Dist: psygnal>=0.3.4
+Requires-Dist: pydantic-compat>=0.1.1
+Requires-Dist: pydantic>=1.8
+Requires-Dist: typing-extensions
+Provides-Extra: dev
+Requires-Dist: fonticon-fontawesome6; extra == 'dev'
+Requires-Dist: ipython; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pdbpp; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: pytest-qt; extra == 'dev'
+Requires-Dist: pytest>=6.0; extra == 'dev'
+Requires-Dist: qtpy; extra == 'dev'
+Requires-Dist: rich; extra == 'dev'
+Requires-Dist: superqt[iconify]; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: griffe-fieldz; extra == 'docs'
+Requires-Dist: griffe==0.36.9; extra == 'docs'
+Requires-Dist: mkdocs-gen-files; extra == 'docs'
+Requires-Dist: mkdocs-literate-nav; extra == 'docs'
+Requires-Dist: mkdocs-macros-plugin==1.0.5; extra == 'docs'
+Requires-Dist: mkdocs-material==9.4.1; extra == 'docs'
+Requires-Dist: mkdocs==1.5.3; extra == 'docs'
+Requires-Dist: mkdocstrings-python==1.7.3; extra == 'docs'
+Requires-Dist: mkdocstrings==0.23.0; extra == 'docs'
+Requires-Dist: typing-extensions>=4.0; extra == 'docs'
+Provides-Extra: qt
+Requires-Dist: qtpy; extra == 'qt'
+Requires-Dist: superqt[iconify]; extra == 'qt'
+Provides-Extra: test
+Requires-Dist: pytest-cov; extra == 'test'
+Requires-Dist: pytest>=6.0; extra == 'test'
+Provides-Extra: test-qt
+Requires-Dist: fonticon-fontawesome6; extra == 'test-qt'
+Requires-Dist: pytest-cov; extra == 'test-qt'
+Requires-Dist: pytest-qt; extra == 'test-qt'
+Requires-Dist: pytest>=6.0; extra == 'test-qt'
+Requires-Dist: qtpy; extra == 'test-qt'
+Requires-Dist: superqt[iconify]; extra == 'test-qt'
+Description-Content-Type: text/markdown
+
+# app-model
+
+[![License](https://img.shields.io/pypi/l/app-model.svg?color=green)](https://github.com/pyapp-kit/app-model/raw/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/app-model.svg?color=green)](https://pypi.org/project/app-model)
+[![Python Version](https://img.shields.io/pypi/pyversions/app-model.svg?color=green)](https://python.org)
+[![CI](https://github.com/pyapp-kit/app-model/actions/workflows/ci.yml/badge.svg)](https://github.com/pyapp-kit/app-model/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/pyapp-kit/app-model/branch/main/graph/badge.svg)](https://codecov.io/gh/pyapp-kit/app-model)
+[![Documentation Status](https://readthedocs.org/projects/app-model/badge/?version=latest)](https://app-model.readthedocs.io/en/latest/?badge=latest)
+
+Generic application schema implemented in python.
+
+This is a schema for declarative organization of application data, such as
+menus, keybindings, actions/commands, etc...
+
+Inspired by the VS-Code application model
+
+docs at https://app-model.readthedocs.io/en/latest/
